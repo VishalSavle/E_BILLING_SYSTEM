@@ -1,40 +1,18 @@
-package com.rwi.e.billing.Entity;
+package com.rwi.e.billing.dto;
 
 import java.sql.Date;
 
 import jakarta.persistence.Column;
-import jakarta.persistence.Entity;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.GenerationType;
-import jakarta.persistence.Table;
-import jakarta.persistence.Id;
-@Entity
-@Table(name="Product_Details")
-public class Product_Entity {
-	@Id
-	@GeneratedValue(strategy = GenerationType.IDENTITY)
-	@Column(name="Id")
-	private int Id;
-	@Column(name ="name",nullable = false)
+
+public class Product_Dto {
+
 	private String name;
-	@Column(name ="price")
 	private Double price;
-	@Column(name="mfd",nullable = false)
 	private Date mfd;
-	@Column(name="exp",nullable = false)
 	private Date exp;
-	@Column(name="units",nullable = false)
 	private int units;
-	@Column(name="discount")
 	private double discount;
-	@Column(name="gst")
 	private double gst;
-	public int getId() {
-		return Id;
-	}
-	public void setId(int id) {
-		Id = id;
-	}
 	public String getName() {
 		return name;
 	}
