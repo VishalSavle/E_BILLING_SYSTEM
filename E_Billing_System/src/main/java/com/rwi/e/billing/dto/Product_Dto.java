@@ -6,6 +6,7 @@ import jakarta.persistence.Column;
 
 public class Product_Dto {
 
+	private int Id;
 	private String name;
 	private Double price;
 	private Date mfd;
@@ -13,6 +14,13 @@ public class Product_Dto {
 	private int units;
 	private double discount;
 	private double gst;
+	
+	public int getId() {
+		return Id;
+	}
+	public void setId(int id) {
+		Id = id;
+	}
 	public String getName() {
 		return name;
 	}
